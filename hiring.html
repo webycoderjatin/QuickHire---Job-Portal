@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | QuickHire</title>
+    <link rel="stylesheet" href="custom.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #e0ebba;
+            --secondary-color: #99eac2;
+            --light-color: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgb(99, 99, 99), black);
+            color: white;
+            padding: 5rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .navbar-brand span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-link {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color);
+        }
+        
+        .job-card {
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .values-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-color);
+            color: var(--secondary-color);
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .apply-form {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .team-image {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .text-icon{
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg nav-dark py-0 "
+                style="background: linear-gradient(109.6deg, rgb(148, 233, 194) 11.2%, rgb(224, 235, 186) 91.1%);">
+                <div class="container-fluid py-1 py-md-2">
+                        <a class="navbar-brand text-black mx-5 fw-bold" href="#">
+                                <i class="fa-brands fa-quora text-black"></i>
+                                QuickHire</a>
+                        <button class="navbar-toggler outline-none border-0" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav gap-4 text-md-end">
+                                        <a class="nav-link text-black fw-light py-3 py-md-1" aria-current="page"
+                                                href="/">Find job</a>
+                                        <a class="nav-link  text-black fw-light py-3 py-md-1" href="messages.html">Messages</a>
+                                        <a class="nav-link active-cst text-black fw-light py-3 py-md-1" href="hiring.html">Hiring</a>
+                                        <a class="nav-link text-black fw-light py-3 py-md-1" href="#">Community</a>
+                                        <a class="nav-link text-black fw-light py-3 py-md-1" href="hiring.html#faq">FAQ</a>
+                                </div>
+                        </div>
+                        <div class="ms-auto d-none d-lg-block">
+                                <div class="d-flex gap-4 text-black align-items-center">
+                                        <span class="d-flex gap-2">
+                                                <i class="fa-solid fa-location-dot"></i>
+                                                <h6 class="fw-light m-0">India , IN</h6>
+                                        </span>
+                                        <span class="dp-notify">
+                                                <img src="assets/person_profile.jpeg" alt="" height="25px"
+                                                        class="rounded-circle">
+                                        </span>
+                                        <i class="fa-solid fa-gear icon-circle"></i>
+                                        <i class="fa-solid fa-bell icon-circle"></i>
+                                </div>
+                        </div>
+                </div>
+        </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Join Our Team</h1>
+            <p class="lead mb-5">We're looking for talented individuals who are passionate about transforming the hiring experience.</p>
+            <a href="#open-positions" class="btn btn-light btn-lg px-4 me-2">View Open Positions</a>
+            <a href="#our-culture" class="btn btn-outline-light btn-lg px-4">Our Culture</a>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="py-5" id="our-culture">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="/assets/team-image.jpeg" alt="Team working together" class="team-image">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Why Join QuickHire?</h2>
+                    <p class="mb-4">At QuickHire, we're revolutionizing how companies find talent and how candidates find their dream jobs. We believe in creating a workplace where innovation thrives and every team member can make a meaningful impact.</p>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="values-icon me-3">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div>
+                            <h5>Growth & Innovation</h5>
+                            <p>We encourage continuous learning and innovative thinking to solve complex problems.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="values-icon me-3">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h5>Collaborative Culture</h5>
+                            <p>We value diverse perspectives and believe great ideas can come from anywhere.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex">
+                        <div class="values-icon me-3">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div>
+                            <h5>Work-Life Balance</h5>
+                            <p>We promote flexibility and support team members in all aspects of their lives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Benefits & Perks</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 text-center p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-heartbeat fa-3x text-icon"></i>
+                        </div>
+                        <h4>Comprehensive Healthcare</h4>
+                        <p>Medical, dental, and vision coverage for you and your dependents.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 text-center p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-laptop-house fa-3x text-icon"></i>
+                        </div>
+                        <h4>Flexible Work</h4>
+                        <p>Remote-friendly environment with flexible work hours.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 text-center p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-graduation-cap fa-3x text-icon"></i>
+                        </div>
+                        <h4>Learning Stipend</h4>
+                        <p>Annual budget for courses, books, and conferences.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 text-center p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-piggy-bank fa-3x text-icon"></i>
+                        </div>
+                        <h4>401(k) Matching</h4>
+                        <p>Retirement plan with company matching to help secure your future.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 text-center p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-umbrella-beach fa-3x text-icon"></i>
+                        </div>
+                        <h4>Generous PTO</h4>
+                        <p>Unlimited vacation policy and paid holidays.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 h-100 text-center p-4">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-chart-line fa-3x text-icon"></i>
+                        </div>
+                        <h4>Equity Options</h4>
+                        <p>Share in our success with employee stock options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Hiring Process Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Our Hiring Process</h2>
+            <p class="text-center mb-5">We've designed our hiring process to be efficient and transparent.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="d-flex flex-column flex-md-row align-items-center mb-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-md-4 mb-3 mb-md-0" style="width: 80px; height: 80px; flex-shrink: 0;">
+                            <i class="fas fa-file-alt fa-2x "></i>
+                        </div>
+                        <div>
+                            <h4>1. Application Review</h4>
+                            <p class="mb-0">Our recruiting team reviews your application and ensures your skills match our requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-column flex-md-row align-items-center mb-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-md-4 mb-3 mb-md-0" style="width: 80px; height: 80px; flex-shrink: 0;">
+                            <i class="fas fa-phone-alt fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4>2. Initial Screening</h4>
+                            <p class="mb-0">A 30-minute call with a recruiter to discuss your background, experience, and interest in the role.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-column flex-md-row align-items-center mb-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-md-4 mb-3 mb-md-0" style="width: 80px; height: 80px; flex-shrink: 0;">
+                            <i class="fas fa-tasks fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4>3. Skills Assessment</h4>
+                            <p class="mb-0">Depending on the role, you may be asked to complete a skills assessment or take-home project.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-column flex-md-row align-items-center mb-4">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-md-4 mb-3 mb-md-0" style="width: 80px; height: 80px; flex-shrink: 0;">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4>4. Team Interviews</h4>
+                            <p class="mb-0">Meet with the team members you'll be working with to assess technical skills and culture fit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-column flex-md-row align-items-center">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-md-4 mb-3 mb-md-0" style="width: 80px; height: 80px; flex-shrink: 0;">
+                            <i class="fas fa-handshake fa-2x"></i>
+                        </div>
+                        <div>
+                            <h4>5. Offer & Onboarding</h4>
+                            <p class="mb-0">If you're a good fit, we'll extend an offer and begin the onboarding process once you accept.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">What Our Team Says</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="text-icon me-3">
+                                <i class="fas fa-quote-left fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Sarah Johnson</h5>
+                                <p class="text-muted mb-0">Software Engineer</p>
+                            </div>
+                        </div>
+                        <p>"Working at QuickHire has been the highlight of my career. The collaborative culture and opportunities to work on challenging problems keep me engaged every day."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class=" text-icon me-3">
+                                <i class="fas fa-quote-left fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Michael Chen</h5>
+                                <p class="text-muted mb-0">Product Designer</p>
+                            </div>
+                        </div>
+                        <p>"I love that QuickHire prioritizes both personal growth and work-life balance. I've been able to advance my career while maintaining time for my family and hobbies."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class=" text-icon me-3">
+                                <i class="fas fa-quote-left fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Rachel Martinez</h5>
+                                <p class="text-muted mb-0">Marketing Manager</p>
+                            </div>
+                        </div>
+                        <p>"The leadership team truly cares about employee wellbeing and creates an environment where everyone feels valued. It's refreshing to work somewhere where your input matters."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    What is the interview process like?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our interview process typically includes an initial screening call, skills assessment, and team interviews. The entire process usually takes 2-3 weeks from application to offer, and we strive to provide feedback at each stage.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ Item 2 -->
+                        <div class="accordion-item border-0 mb-3 shadow-sm">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Do you offer remote work options?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, many of our positions are remote-friendly or fully remote. Each job posting specifies the location requirements. We have team members across multiple time zones and have built our culture to support distributed teams.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add the missing job application form -->
+
+
+<!-- Add footer -->
+<footer>
+    <p>&copy; 2025 QuickHire. All Rights Reserved.</p>
+</footer>
+
+

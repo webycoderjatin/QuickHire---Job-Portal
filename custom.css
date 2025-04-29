@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Inter", serif;
+}
+
+.nav-dark{
+    background-color: #141414;
+}
+
+.active-cst{
+    border-bottom: 2px solid white !important;
+}
+
+.bg-dark{
+    background-color: #141414;
+}
+
+.filter-section-head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:425px){
+    .filter-section-head{
+        flex-direction: column;
+    }
+
+    .filter-section-head .dropdown{
+        width: 80%;
+    }
+}
+
+.icon-filter{
+    color: white;
+}
+
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dp-notify{
+    position: relative;
+    display: inline-block;
+    height: 25px;
+}
+
+.dp-notify img{
+   margin-top: -3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background: linear-gradient(109.6deg, rgb(148, 233, 194) 11.2%, rgb(224, 235, 186) 91.1%); /* Change to any color */
+    border: 2px solid white;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: linear-gradient(109.6deg, rgb(148, 233, 194) 11.2%, rgb(224, 235, 186) 91.1%); /* Change to any color */
+    border: 2px solid white;
+}
+
+
+.dp-notify::after{
+    content: "";
+    position: absolute;
+    top: 0px;     /* Adjust position */
+    left: 20px;    /* Adjust position */
+    width: 7px;  /* Box width */
+    height: 7px; /* Box height */
+    background-color:cadetblue;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.icon-circle{
+    font-size: 15px;
+}
+
+.drop-width{
+    width: 120px;
+    overflow-x: hidden;
+}
+
+#pattern-learn-more{
+    background: url(assets/pattern.svg);
+    background-size: 30px;
+}
+
+@media screen and (max-width:768px){
+    #get-card{
+        font-size: 17px;
+    }
+
+    #card_responsive{
+        width: 45% !important;
+    }
+}
+
+@media screen and (max-width:425px){
+
+    #card-get-prof{
+        width: 100%;
+    }
+
+    #get-card{
+        font-size: 24px;
+    }
+
+    #joblist{
+        width: 40rem !important;
+    }
+
+    #card_responsive{
+        width: 50% !important;
+    }
+
+}
+
+
+@media screen and (max-width:375px){
+
+    #card-get-prof{
+        width: 100%;
+    }
+
+    #get-card{
+        font-size: 24px;
+    }
+
+    #joblist{
+        width: 20rem !important;
+    }
+
+    #card_responsive{
+        width: 80% !important;
+    }
+
+}
+
+
+@media screen and (max-width:320px){
+
+    #card-get-prof{
+        width: 100%;
+        padding: 0px;
+    }
+
+    #get-card{
+        font-size: 24px;
+        padding: 0px ;
+    }
+
+    #joblist{
+        width: 90vw !important;
+    }
+
+     #job-cards{
+        padding: 0px 0px;
+     }
+    
+
+}
+
+
+
+/* Messages */
+
+.msg-hand{
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.msg-hand:hover{
+    transform: scale(1.01);
+}
